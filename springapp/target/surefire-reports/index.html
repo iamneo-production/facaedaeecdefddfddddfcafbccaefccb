@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Surefire_suite" class="navigator-link">
-              <span class="suite-name border-skipped">Surefire suite</span>
+              <span class="suite-name border-passed">Surefire suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,26 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,  2 skipped,  </span>
-                  </li>
-                  <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods skipped suite-Surefire_suite"> (hide)</a> <!-- hide-methods skipped suite-Surefire_suite -->
-                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods skipped suite-Surefire_suite"> (show)</a> <!-- show-methods skipped suite-Surefire_suite -->
-                    </span>
-                    <div class="method-list-content skipped suite-Surefire_suite">
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="com.examly.springapp.SpringApplicationTests" class="method navigator-link" hash-for-method="Facebook">Facebook</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="com.examly.springapp.SpringApplicationTests" class="method navigator-link" hash-for-method="loginToFlipkart">loginToFlipkart</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content skipped suite-Surefire_suite -->
+                    <span class="method-stats">0 methods,   </span>
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -123,122 +104,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
-          <div class="suite-Surefire_suite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">com.examly.springapp.SpringApplicationTests</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="Facebook">
-                  </a> <!-- Facebook -->
-                  <span class="method-name">Facebook</span>
-                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;facaedaeecdefddfddddfcafbccaefccb-0&apos;, ip: &apos;10.56.32.8&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.10.162+&apos;, java.version: &apos;11.0.18&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:573)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
-	at com.examly.springapp.SpringApplicationTests.beforeTest(SpringApplicationTests.java:24)
-Caused by: java.net.ConnectException: Failed to connect to /34.85.242.216:4444
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:265)
-	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:183)
-	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.java:224)
-	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.java:108)
-	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.java:88)
-	at okhttp3.internal.connection.Transmitter.newExchange(Transmitter.java:169)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:41)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:94)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:88)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:229)
-	at okhttp3.RealCall.execute(RealCall.java:81)
-	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:105)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	... 33 more
-Caused by: java.net.ConnectException: Connection refused (Connection refused)
-	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:412)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:255)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:237)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.base/java.net.Socket.connect(Socket.java:609)
-	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:130)
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:263)
-	... 56 more
-... Removed 29 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="loginToFlipkart">
-                  </a> <!-- loginToFlipkart -->
-                  <span class="method-name">loginToFlipkart</span>
-                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;facaedaeecdefddfddddfcafbccaefccb-0&apos;, ip: &apos;10.56.32.8&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.10.162+&apos;, java.version: &apos;11.0.18&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:573)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
-	at com.examly.springapp.SpringApplicationTests.beforeTest(SpringApplicationTests.java:24)
-Caused by: java.net.ConnectException: Failed to connect to /34.85.242.216:4444
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:265)
-	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:183)
-	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.java:224)
-	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.java:108)
-	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.java:88)
-	at okhttp3.internal.connection.Transmitter.newExchange(Transmitter.java:169)
-	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:41)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
-	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:94)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
-	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
-	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:88)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
-	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
-	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:229)
-	at okhttp3.RealCall.execute(RealCall.java:81)
-	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:105)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	... 33 more
-Caused by: java.net.ConnectException: Connection refused (Connection refused)
-	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:412)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:255)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:237)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
-	at java.base/java.net.Socket.connect(Socket.java:609)
-	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:130)
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:263)
-	... 56 more
-... Removed 29 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Surefire_suite-class-skipped -->
         </div> <!-- panel Surefire_suite -->
         <div panel-name="test-xml-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -290,15 +155,7 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
-data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Facebook')
-data.setCell(0, 2, 'com.examly.springapp.SpringApplicationTests')
-data.setCell(0, 3, 0);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'loginToFlipkart')
-data.setCell(1, 2, 'com.examly.springapp.SpringApplicationTests')
-data.setCell(1, 3, 0);
+data.addRows(0);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
@@ -328,26 +185,6 @@ return data;
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.examly.springapp.SpringApplicationTests</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">beforeTest</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
-              <div class="test-method">
-                <span class="method-name">Facebook</span>
-                <span class="method-start">1063 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">loginToFlipkart</span>
-                <span class="method-start">1066 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-test after">
-                <span class="method-name">closeBrowser</span>
-                <span class="method-start">1068 ms</span>
-              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

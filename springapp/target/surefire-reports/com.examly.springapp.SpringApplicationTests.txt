@@ -1,16 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.examly.springapp.SpringApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 1, Errors: 0, Skipped: 3, Time elapsed: 2.279 s <<< FAILURE! - in com.examly.springapp.SpringApplicationTests
-beforeTest(com.examly.springapp.SpringApplicationTests)  Time elapsed: 1.88 s  <<< FAILURE!
-org.openqa.selenium.remote.UnreachableBrowserException: 
-Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'facaedaeecdefddfddddfcafbccaefccb-0', ip: '10.56.32.8', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.162+', java.version: '11.0.18'
-Driver info: driver.version: RemoteWebDriver
-	at com.examly.springapp.SpringApplicationTests.beforeTest(SpringApplicationTests.java:24)
-Caused by: java.net.ConnectException: Failed to connect to /34.85.242.216:4444
-	at com.examly.springapp.SpringApplicationTests.beforeTest(SpringApplicationTests.java:24)
-Caused by: java.net.ConnectException: Connection refused (Connection refused)
-	at com.examly.springapp.SpringApplicationTests.beforeTest(SpringApplicationTests.java:24)
-
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.926 s - in com.examly.springapp.SpringApplicationTests
