@@ -14,9 +14,12 @@ import org.testng.annotations.Test;
 
 public class SpringApplicationTests {
 
-	String url = "http://www.flipkart.com";
+	public static void main(String[] args) {
+		String url = "http://www.flipkart.com";
     ChromeOptions chromeOptions = new ChromeOptions();
 	WebDriver driver = null;
+	}
+	
 
 	@BeforeTest
 	public void beforeTest() throws Exception
