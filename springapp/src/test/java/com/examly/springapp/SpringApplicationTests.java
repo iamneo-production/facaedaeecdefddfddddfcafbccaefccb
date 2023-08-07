@@ -1,85 +1,49 @@
 package com.examly.springapp;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import java.net.URL;
 
-import org.junit.Test; 
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.MediaType;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
-@SpringBootTest(classes = SpringappApplication.class)
-@AutoConfigureMockMvc
-@RunWith(SpringRunner.class)
+
 public class SpringApplicationTests {
 
-	@Autowired
-    private MockMvc mockMvc;	
+	String url = "http://www.flipkart.com";
+    ChromeOptions chromeOptions = new ChromeOptions();
+	WebDriver driver = null;
 
-	//Add A New Task
-	@Test
-    public void test_case1() throws Exception {
-		
-		String dataOne = "{\"taskId\":\"12211\",\"taskHolderName\":\"Gowthaman M\",\"taskDate\":\"4/15/2021\",\"taskName\":\"Spring Projects\",\"taskStatus\":\"In Progress\"}";
-	 	mockMvc.perform(MockMvcRequestBuilders.post("/saveTask")
-	 			.contentType(MediaType.APPLICATION_JSON)
-	 			.content(dataOne)
-	 			.accept(MediaType.APPLICATION_JSON))
-	        	.andExpect(status().isOk())
-	        	.andReturn();
-	 	
-    }
-	
-	
-	//Get All Task
-	@Test
-    public void test_case2() throws Exception {
-		
-	 	mockMvc.perform(MockMvcRequestBuilders.get("/alltasks")
-	 			.contentType(MediaType.APPLICATION_JSON)
-	 			.accept(MediaType.APPLICATION_JSON))
-	        	.andExpect(status().isOk())
-		        .andExpect(MockMvcResultMatchers.jsonPath("$[*].houseNo").exists())
-		        .andExpect(MockMvcResultMatchers.jsonPath("$").isNotEmpty())
-	        	.andReturn();
-	 	
-    }
-	
-	//Get A Task By ID
-	@Test
-	public void test_case3() throws Exception {
-		
-		mockMvc.perform(MockMvcRequestBuilders.get("/getTask")
-				.param("taskId","12211")
-				.contentType(MediaType.APPLICATION_JSON)
-		 		.accept(MediaType.APPLICATION_JSON))
-		        .andExpect(status().isOk())
-		        .andExpect(jsonPath("$.taskHolderName").value("Gowthaman M"))
-		        .andExpect(jsonPath("$.taskDate").value("4/15/2021"))
-		        .andExpect(jsonPath("$.taskName").value("Spring Projects"))
-				.andExpect(jsonPath("$.taskStatus").value("In Progress"))
-		        .andReturn();
-			
+	@BeforeTest
+	public void beforeTest() throws Exception
+	 {
+		driver = new RemoteWebDriver(new URL("http://34.85.242.216:4444/"), chromeOptions);
+	    driver.manage().window().maximize();
 	}
-	
-	//Delete A Task
-	@Test
-	public void test_case4() throws Exception {
+    public void Facebook() throws InterruptedException 
+	{
+        driver.navigate().to("http://www.flipkart.com");
+		String title =driver.getTitle();
+        System.out.println(title);
+		Assert.assertEquals(title, "Learning and assessment solution for Universities and Enterprises");
+	}
+    @Test
+	public void loginToFlipkart() {
+		driver.findElement(By.xpath("//div[@class='_1XBjg- row']//form//input[@type='text']")).sendKeys("testuser@abc.com");
 		
-		mockMvc.perform(MockMvcRequestBuilders.get("/deleteTask")
-				.param("taskId","12211")
-				.contentType(MediaType.APPLICATION_JSON)
-		 		.accept(MediaType.APPLICATION_JSON))
-		        .andExpect(status().isOk())
-		        .andReturn();
-			
+		driver.findElement(By.xpath("//div[@class='_1XBjg- row']//form//input[@type='password']")).sendKeys("Test@1234");
+		
+		driver.findElement(By.xpath("//div[@class='_1XBjg- row']//form//button[@type='submit']")).click();
+		
 	}
 
+	@AfterTest
+	public void closeBrowser() {
+		driver.quit();
+	}
 
 }
